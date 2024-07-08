@@ -1,0 +1,114 @@
+.banner {
+    width: 100%;
+    height: 13rem;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+a {
+    text-decoration: none;
+    color: green;
+}
+li {
+    list-style: none;
+}
+ul {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    border: 2px solid green;
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin-top: -1rem;
+}
+
+.title {
+    height: 38rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.registerform {
+    margin-top: 1rem;
+    text-align: left;
+}
+form {
+    background-color: white;
+    border-radius: 6px;
+    text-align: right;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    margin-top: 10px;
+    height: 22rem;
+    width: 26rem;
+}
+.formgroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 10px;
+}
+.formreg {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 2rem;
+}
+.input {
+    font-size: 1rem;
+    padding: 8px;
+    width: 15rem;
+}
+.radio {
+    width: 4.8rem;
+}
+#radiochoice {
+    margin-right: 6.5rem;
+}
+button {
+    font-size: 1.5rem;
+    padding: 6px 40px;
+    color: white;
+    cursor: pointer;
+    background-color: #ff2f52;
+    border: none;
+}
+.submit {
+    margin-top: 1rem;
+}
+.registertitle {
+    color: #ff2f52;
+}
+input {
+    background-color: rgb(228, 228, 228);
+    border: none;
+    z-index: 999;
+}
+select {
+    background-color: rgb(228, 228, 228);
+}
+.cards {
+    position: absolute;
+    margin-top: -10rem;
+    margin-left: -7.5rem;
+    height: 14rem;
+}
+footer {
+    background-color: rgb(0, 83, 0);
+    height: 10rem;
+    font-size: 1.5rem;
+    padding: 2rem;
+    color: white;
+}
+.groupfooter {
+    display: flex;
+    justify-content: space-around;
+}

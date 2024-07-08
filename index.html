@@ -1,0 +1,135 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>7-11</title>
+        <link rel="stylesheet" href="assets/css/styles.css">
+    </head>
+    <body>
+        <header>
+            <img class="banner" src="assets/img/NXTLVL_WEBDEB_711_Banner.png" alt="">
+            <ul>
+                <li><a href="">Praesentium</a></li>
+                <li><a href="">Voluptatum</a></li>
+                <li><a href="">Dignissimos</a></li>
+                <li><a href="">Blanditiis</a></li>
+            </ul>
+        </header>
+
+        <div class="title">
+            <h1>Sed ut perspiciatis unde omnis iste natus error sit <br>voluptatem sit amet tempor</h1>
+            <p style="margin-top: 10px;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
+            <div class="registerform">
+                <h1 class="registertitle">Registration Form</h1>
+                <form action="">
+                    <div class="formreg">
+                        <div class="formgroup">
+                            <label for="name">Name</label>
+                            <input class="input" type="text" name="name">
+                        </div>
+                        <div class="formgroup">
+                            <label for="email">Email</label>
+                            <input class="input" type="text" name="email">
+                        </div>
+                        <div class="formgroup">
+                            <label for="mobilenum">Mobile Number</label>
+                            <input class="input" type="text" name="mobilenum">
+                        </div>
+                        <div class="formgroup">
+                            <label id="dateof" for="date">Date of Birth</label>
+                            <div>
+                                <select class="radio" name="month" id="monthSelect">
+                                    <option value="month">MONTH</option>
+                                </select>
+                                <select class="radio" name="day" id="daySelect">
+                                    <option value="day">DAY</option>
+                                </select>
+                                <select class="radio" name="year" id="yearSelect">
+                                    <option value="year">YEAR</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="formgroup" id="radiochoice">
+                            <label for="gender">Gender</label>
+                            <input type="radio" name="gender" id="female" value="female">
+                            <label style="margin-left: -10px;" for="female">Female</label>
+                            <input type="radio" name="gender" id="male" value="male">
+                            <label style="margin-left: -10px;" for="male">Male</label>
+                        </div>
+                        <div class="formgroup" style="text-align: left;">
+                            <input type="checkbox" name="checkbox">
+                            <label style="font-size: 13px;" for="checkbox">Proin sit amet lectus venenatis, consectetur <br>magna vitae, convallis diam. Nullam iaculis.</label>
+                        </div>
+                        <button class="submit">Submit</button>
+                    </div>
+                </form>
+                <img class="cards" src="assets/img/cards.png" alt="">
+            </div>
+        </div>
+
+        <footer>
+            <div class="groupfooter">
+                <div>
+                    <p>SUSPENDISSE</p>
+                    <br>
+                    <p>Quisque <br>Faucibus
+                        <br>Sapien
+                        <br>Hendrerit</p>
+                </div>
+                <div>
+                    <p>PORTA</p>
+                    <br>
+                    <p>
+                        Mauris <br>Suscipit <br>At ipsum <br>Vehicula
+                    </p>
+                </div>
+                <div>
+                    <p>FEUGIAT</p>
+                    <br>
+                    <p>
+                        Pellentesque <br>Accumsan <br>Velit in urna <br>Faucibus
+                    </p>
+                </div>
+                <div>
+                    <p>PORTA</p>
+                    <br>
+                    <p>
+                        Mauris <br>Suscipit <br>At ipsum <br>Vehicula
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script>
+        // Populate days
+        const daySelect = document.getElementById('daySelect');
+        for (let day = 1; day <= 31; day++) {
+            const option = document.createElement('option');
+            option.value = day;
+            option.textContent = day;
+            daySelect.appendChild(option);
+        }
+    
+        // Populate months
+        const monthSelect = document.getElementById('monthSelect');
+        const months = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+        months.forEach((month, index) => {
+            const option = document.createElement('option');
+            option.value = index + 1; // Month value (1-12)
+            option.textContent = month;
+            monthSelect.appendChild(option);
+        });
+    
+        // Populate years
+        const yearSelect = document.getElementById('yearSelect');
+        for (let year = 1920; year <= 2024; year++) {
+            const option = document.createElement('option');
+            option.value = year;
+            option.textContent = year;
+            yearSelect.appendChild(option);
+        }
+    </script>
+</html>
