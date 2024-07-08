@@ -4,9 +4,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>7-11</title>
         <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
     </head>
     <body>
         <header>
+            <div class="response">
+                <button class="menu-button" onclick="toggleMenu()">
+                    <div class="bar bar1"></div>
+                    <div class="bar bar2"></div>
+                    <div class="bar bar3"></div>
+                </button>
+                <div>
+                    <input class="search" type="text">
+                    <img class="searchicon" src="assets/img/1200px-VisualEditor_-_Icon_-_Search-big_-_white.svg.png" alt="">
+                </div>
+                <div class="menu" id="menu">
+                    <a>Home</a>
+                    <a>About</a>
+                    <a>Services</a>
+                    <a>Contact</a>
+                </div>
+            </div>
             <img class="banner" src="assets/img/NXTLVL_WEBDEB_711_Banner.png" alt="">
             <ul>
                 <li><a href="">Praesentium</a></li>
@@ -130,6 +148,14 @@
             option.value = year;
             option.textContent = year;
             yearSelect.appendChild(option);
+        }
+    </script>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            var button = document.querySelector(".menu-button");
+            menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+            button.classList.toggle("active");
         }
     </script>
 </html>
