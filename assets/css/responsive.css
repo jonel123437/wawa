@@ -64,7 +64,9 @@
     padding-right: 14px;
 }
 
-.search:focus {
+.search:focus,
+.input:focus,
+select:focus {
     outline: none;
 }
 .searchicon {
@@ -73,6 +75,13 @@
     right: 15;
     z-index: 999;
     top: 7;
+}
+
+.parag{
+    font-size: 13px;
+}
+#checks {
+    text-align: left;
 }
 
 @media screen and (max-width: 400px) {
@@ -84,5 +93,113 @@
     }
     .response {
         display: block;
+    }
+    .titlehead {
+        font-size: 15px;
+        margin-top: -2rem;
+    }
+    .titlesub {
+        font-size: 10px;
+    }
+    form {
+        font-size: 10px;
+        width: 19rem;
+        height: 17rem;
+    }
+    .input {
+        font-size: 10px;
+        padding: 5px;
+        width: 12rem;
+    }
+    .registertitle {
+        font-size: 1rem;
+    }
+    .registerform {
+        margin-top: 2rem;
+    }
+    select {
+        font-size: 9px;
+    }
+    .radio {
+        width: 3.5rem;
+    }
+    .formgroup div {
+        display: flex;
+        gap: 5px;
+        margin-right: 14px;
+    }
+    .mobilenumber {
+        margin-left: -2rem;
+    }
+    #dateof {
+        width: 3.4rem;
+        text-align: left;
+    }
+    #radiochoice {
+        margin-right: 5.5rem;
+    }
+    .parag {
+        font-size: 8px;
+    }
+    #checks {
+        margin-right: 3rem;
+    }
+    .submit {
+        font-size: 10px;
+        padding: 5px 20px;
+    }
+    .cards{
+        height: 8rem;
+        width: 9rem;
+        margin-left: -2.4rem;
+        margin-top: -5rem;
+    }
+    input {
+        font-size: 10px;
+    }
+    .title {
+        height: 26rem;
+    }
+    footer {
+        padding: 10px;
+    }
+    .groupfooter {
+        text-align: center;
+        display: block;
+    }
+    .footerpar {
+        display: none;
+    }
+    .footertitle,
+    .asdasd {
+        border-bottom: 0.1px solid rgb(226, 226, 226);
+        font-size: 10px;
+        width: 5rem;
+        cursor: pointer;
+    }
+    .groupfooter div {
+        height: 1rem;
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+    }
+    .footerpar {
+        font-size: 10px;
+    }
+    .footertitle:hover + .footerpar {
+        display: block;
+        position: absolute;
+        background-color: rgb(228, 228, 228);
+        margin-top: 1rem;
+        width: 5rem;
+        color: black;
+    }
+    .asdasd:hover + .footerpar {
+        display: block;
+        position: absolute;
+        background-color: rgb(228, 228, 228);
+        margin-top: -3rem;
+        width: 5rem;
+        color: black;
     }
 }
