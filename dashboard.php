@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+// Check if the user is logged in
+if (!isset($_SESSION['user_id'])) {
+    header("Location: index.html");
+    exit();
+}
+
+// Get the user's name from the session
+$name = $_SESSION['name'];
+?>
+
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -5,6 +18,7 @@
         <title>7-11</title>
         <link rel="stylesheet" href="assets/css/styles.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="assets/css/home.css">
     </head>
     <body>
         <header>
@@ -27,67 +41,16 @@
             </div>
             <img class="banner" src="assets/img/NXTLVL_WEBDEB_711_Banner.png" alt="">
             <ul>
-                <li><a href="">Home</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li><a href="">About</a></li>
                 <li><a href="">Services</a></li>
                 <li><a href="">Contact</a></li>
             </ul>
         </header>
 
-        <div class="title">
-            <h1 class="titlehead">Sed ut perspiciatis unde omnis iste natus error sit <br>voluptatem sit amet tempor</h1>
-            <p class="titlesub" style="margin-top: 10px;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
-            <div class="registerform">
-                <h1 class="registertitle">Registration Form</h1>
-                <form action="submit_form.php" method="POST">
-                    <div class="formreg">
-                        <div class="formgroup">
-                            <label for="name">Name</label>
-                            <input class="input" type="text" name="name" required>
-                        </div>
-                        <div class="formgroup">
-                            <label for="email">Email</label>
-                            <input class="input" type="email" name="email" required>
-                        </div>
-                        <div class="formgroup">
-                            <label for="password">Password</label>
-                            <input class="input" type="password" name="password" required>
-                        </div>
-                        <div class="formgroup">
-                            <label for="mobilenum" class="mobilenumber">Mobile Number</label>
-                            <input class="input" type="text" name="mobilenum" required>
-                        </div>
-                        <div class="formgroup plspls">
-                            <label id="dateof" for="date">Date of Birth</label>
-                            <div>
-                                <select class="radio" name="month" id="monthSelect" required>
-                                    <option value="">MONTH</option>
-                                </select>
-                                <select class="radio" name="day" id="daySelect" required>
-                                    <option value="">DAY</option>
-                                </select>
-                                <select class="radio" name="year" id="yearSelect" required>
-                                    <option value="">YEAR</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="formgroup" id="radiochoice">
-                            <label for="gender">Gender</label>
-                            <input type="radio" name="gender" id="female" value="Female" required>
-                            <label style="margin-left: -10px;" for="female">Female</label>
-                            <input type="radio" name="gender" id="male" value="Male" required>
-                            <label style="margin-left: -10px;" for="male">Male</label>
-                        </div>
-                        <div id="checks" class="formgroup">
-                            <input type="checkbox" id="checkbox" name="checkbox" required>
-                            <label for="checkbox">I agree to the <a href="/terms-and-conditions" target="_blank">terms and conditions</a></label>
-                        </div>
-                        <button class="submit" type="submit">Submit</button>
-                        <div>Already have an account? <a href="login.html">Login</a></div>
-                    </div>
-                </form>
-                <img class="cards" src="assets/img/cards.png" alt="">
-            </div>
+        <div class="title" id="home">
+            <h1>Welcome, <?php echo htmlspecialchars($name); ?> to Dashboard</h1>
+            <button id="logout">Logout</button>
         </div>
 
         <footer>
@@ -115,6 +78,11 @@
             </div>
         </footer>
     </body>
+    <script>
+        document.getElementById('logout').addEventListener('click', function () {
+            window.location.href = "login.html"
+        })
+    </script>
     <script>
         // Populate days
         const daySelect = document.getElementById('daySelect');
@@ -146,6 +114,8 @@
             option.textContent = year;
             yearSelect.appendChild(option);
         }
+
+        
     </script>
     <script>
         function toggleMenu() {

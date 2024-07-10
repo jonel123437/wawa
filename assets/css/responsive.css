@@ -82,6 +82,7 @@ select:focus {
 }
 #checks {
     text-align: left;
+    margin-right: 15px;
 }
 
 @media screen and (max-width: 400px) {

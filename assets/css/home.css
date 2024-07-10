@@ -1,0 +1,10 @@
+#home {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#home h1 {
+    font-size: 5rem;
+    margin-top: -7rem;
+}

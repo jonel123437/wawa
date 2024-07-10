@@ -30,7 +30,7 @@ ul {
 }
 
 .title {
-    height: 38rem;
+    height: 40rem;
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
@@ -47,7 +47,7 @@ form {
     text-align: right;
     box-shadow: 0 0 10px rgb(0, 0, 0);
     margin-top: 10px;
-    height: 22rem;
+    height: 24rem;
     width: 26rem;
 }
 .formgroup {
@@ -111,4 +111,7 @@ footer {
 .groupfooter {
     display: flex;
     justify-content: space-around;
+}
+a:hover {
+    text-decoration: underline;
 }

@@ -38,13 +38,9 @@
             <h1 class="titlehead">Sed ut perspiciatis unde omnis iste natus error sit <br>voluptatem sit amet tempor</h1>
             <p class="titlesub" style="margin-top: 10px;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
             <div class="registerform">
-                <h1 class="registertitle">Registration Form</h1>
-                <form action="submit_form.php" method="POST">
+                <h1 class="registertitle">Login Form</h1>
+                <form action="login.php" method="POST">
                     <div class="formreg">
-                        <div class="formgroup">
-                            <label for="name">Name</label>
-                            <input class="input" type="text" name="name" required>
-                        </div>
                         <div class="formgroup">
                             <label for="email">Email</label>
                             <input class="input" type="email" name="email" required>
@@ -53,37 +49,8 @@
                             <label for="password">Password</label>
                             <input class="input" type="password" name="password" required>
                         </div>
-                        <div class="formgroup">
-                            <label for="mobilenum" class="mobilenumber">Mobile Number</label>
-                            <input class="input" type="text" name="mobilenum" required>
-                        </div>
-                        <div class="formgroup plspls">
-                            <label id="dateof" for="date">Date of Birth</label>
-                            <div>
-                                <select class="radio" name="month" id="monthSelect" required>
-                                    <option value="">MONTH</option>
-                                </select>
-                                <select class="radio" name="day" id="daySelect" required>
-                                    <option value="">DAY</option>
-                                </select>
-                                <select class="radio" name="year" id="yearSelect" required>
-                                    <option value="">YEAR</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="formgroup" id="radiochoice">
-                            <label for="gender">Gender</label>
-                            <input type="radio" name="gender" id="female" value="Female" required>
-                            <label style="margin-left: -10px;" for="female">Female</label>
-                            <input type="radio" name="gender" id="male" value="Male" required>
-                            <label style="margin-left: -10px;" for="male">Male</label>
-                        </div>
-                        <div id="checks" class="formgroup">
-                            <input type="checkbox" id="checkbox" name="checkbox" required>
-                            <label for="checkbox">I agree to the <a href="/terms-and-conditions" target="_blank">terms and conditions</a></label>
-                        </div>
-                        <button class="submit" type="submit">Submit</button>
-                        <div>Already have an account? <a href="login.html">Login</a></div>
+                        <button class="submit" type="submit">Login</button>
+                        <div>Don't have an account yet? <a href="index.html">Register</a></div>
                     </div>
                 </form>
                 <img class="cards" src="assets/img/cards.png" alt="">
